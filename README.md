@@ -6,7 +6,7 @@ This application is a simple yet functional **shopping list manager** built usin
 
 ## ✨ Key Features
 
-* **Item Management:** Users can **add** new items to the list, **edit** existing ones, and **delete** items.
+* **Item Management:** Users can **add** new items to the list and **delete** them with a simple swipe.
 * **Category Tagging:** Every item is assigned a **Category** (e.g., Dairy, Produce, Bakery) for easier sorting and visual grouping.
 * **Quantity Tracking:** Allows users to specify the **quantity** of each item they need to purchase.
 * **Real-time Synchronization:** Items are saved to and loaded from a **remote database** (e.g., Firebase, using the HTTP package) ensuring the list persists across sessions and devices.
@@ -28,13 +28,14 @@ This project offers valuable experience with key Flutter/Dart techniques necessa
     * **Interactive List Items:** Implementing features like the **`Dismissible`** widget to handle item deletion with a swipe gesture.
 
 * **Connecting to a Backend/Database (HTTP Requests):**
-    * **CRUD Operations:** Performing **C**reate, **R**ead, **U**pdate, and **D**elete operations using **HTTP requests** (GET, POST, PATCH, DELETE).
+    * **Backend Operations:** Performing **C**reate, **R**ead, and **D**elete operations using **HTTP requests** (GET, POST, DELETE).
     * **Asynchronous Programming (`async`/`await`):** Handling network operations gracefully to avoid blocking the user interface.
     * **JSON Data Handling:** Serializing and deserializing data when communicating with a web backend.
 
-* **App-Wide State Management (Riverpod / Provider):**
-    * Managing the list of items (`List<GroceryItem>`) that needs to be accessed and updated from multiple parts of the app.
-    * Effectively refreshing the UI after a successful network operation (e.g., adding a new item).
+* **State Management (`StatefulWidget` & `setState`):**
+    * Managing the local state of widgets to handle UI changes, such as loading indicators and user input.
+    * Using `setState` to rebuild the UI after asynchronous operations (like fetching data) or user interactions (adding/removing items).
+    * This project serves as a foundation for understanding why more advanced state management solutions like Provider or Riverpod become necessary in larger applications.
 
 ---
 
